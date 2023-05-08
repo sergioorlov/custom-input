@@ -1,0 +1,31 @@
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  @include font-base(14px, 400, 16px);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #fbfbfb;
+  color: black;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

@@ -1,0 +1,43 @@
+@import "mixins";
+
+@include ng-deep {
+  input {
+    height: 25px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #68686a;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  input:hover {
+    background: #f7f9fb;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #9ab3d3;
+    background: #fff;
+  }
+
+  input.ng-invalid.ng-dirty {
+    border-color: #fd5757;
+  }
+
+  input:disabled {
+    background: #eae9e9;
+    cursor: not-allowed;
+  }
+}
+
+.custom-control {
+  min-height: 90px;
+  width: 380px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}

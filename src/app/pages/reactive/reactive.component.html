@@ -1,0 +1,30 @@
+<form [formGroup]="reactiveForm" class="reactive-form">
+  <ax-control title="Login of interviewer:">
+    <input [formControlName]="ReactiveFormEnum.LOGIN_OF_INTERVIEWER"
+           type="text"
+           placeholder="Enter login of interviewer">
+
+    <validation [when]="ValidatorErrorTypesEnum.REQUIRED">This field is required</validation>
+    <validation [when]="ValidatorErrorTypesEnum.MIN_LENGTH">It should be at least 3 characters long</validation>
+    <validation [when]="ValidatorErrorTypesEnum.PATTERN">It should match the pattern {{pattern}}</validation>
+  </ax-control>
+
+  <ax-control title="Technology of interview:">
+    <input [formControlName]="ReactiveFormEnum.TECHNOLOGY_OF_INTERVIEW"
+           type="text"
+           placeholder="Enter technology of interview">
+
+    <validation [when]="ValidatorErrorTypesEnum.REQUIRED">This field is required</validation>
+    <validation [when]="ValidatorErrorTypesEnum.MAX_LENGTH">It should be no more than 6 characters</validation>
+  </ax-control>
+
+  <ax-control title="Date of interview:">
+    <input [formControlName]="ReactiveFormEnum.DATE_OF_INTERVIEW"
+           type="text"
+           placeholder="Choose date of interview"
+           onfocus="(this.type='date') && this.showPicker()">
+
+    <validation [when]="ValidatorErrorTypesEnum.REQUIRED">This field is required</validation>
+    <validation [when]="ValidatorErrorTypesEnum.DATE_PASSED">You chose the date that passed</validation>
+  </ax-control>
+</form>

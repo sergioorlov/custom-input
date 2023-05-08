@@ -1,0 +1,20 @@
+<div class="layout__full-height">
+  <header class="header-container">
+    <nav class="info-container">
+      <ul class="menu">
+        <li class="menu-item">
+          <a class="link" href="" [routerLink]="['/reactive']" routerLinkActive="active">Reactive Form</a>
+        </li>
+        <li class="menu-item">
+          <a class="link" href="" [routerLink]="['/template-driven']" routerLinkActive="active">Template-Driven Form</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <div class="content-container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

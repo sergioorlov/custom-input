@@ -1,0 +1,23 @@
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.4;
+
+@mixin font-base(
+$size: $font-size-base,
+$font-weight: 400,
+$height: $line-height-base,
+$font-style: normal,
+$font-family: $font-family-base
+) {
+  font: $font-weight $font-style #{$size}/#{$height $font-family};
+}
+
+@mixin transition($property: all, $time: 0.25s) {
+  transition: $property $time ease-in;
+}
+
+@mixin ng-deep {
+  :host ::ng-deep {
+    @content;
+  }
+}
